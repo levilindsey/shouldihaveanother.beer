@@ -1,0 +1,15 @@
+beer-screen {
+  display: block;
+
+  .carbonation,
+  .screen {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+beer-screen,
+beer-screen>.screen {
+  background: color(yellow-1);
+  background: linear-gradient(color(yellow-2), color(yellow-1));
+}

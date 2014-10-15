@@ -1,0 +1,109 @@
+/**
+ * Converts a pixel value to em, rem, or % based on a base size
+ * NOTE: For percent units, pass 100% as the $unit
+ * @param  {Number} $pixels             Number of pixels to convert; must be a pixel value
+ * @param  {Number} $unit: 1rem         Unit of the return value; can be em, rem, or %
+ * @param  {Number} $base: $base-size   Base size; must be a pixel value
+ * @return {Number}                     ($pixels / $base) * $unit
+ */
+@function px2unit($pixels, $unit: 1rem, $base: 16px) {
+  @if unit($pixels) != px { @error 'px2unit error: $pixels must be a pixel value; was #{$pixels}'; }
+  @if unitless($unit)     { @error 'px2unit error: $unit may not be unitless; was #{$unit}'; }
+  @if unit($base) != px   { @error 'px2unit error: $base must be a pixel value; was #{$base}'; }
+  @return ($pixels / $base) * $unit;
+}
+
+// --- Shared values --- //
+
+$colors: (
+  black: #000000,
+  white: #FFFFFF,
+
+  gray-1: #444444,
+  gray-2: #888888,
+
+  blue-1: #2299EE,
+  blue-2: #77CCFF,
+
+  yellow-1: #D6AF00,
+  yellow-2: #FFE675,
+
+  // Adapted from http://craftbeeracademy.com/wp-content/uploads/2012/12/SRM_Beer_Color_Chart.jpeg
+  beer-1: #FEE799,
+  beer-2: #EE9E00,
+  beer-3: #BF5C01,
+  beer-4: #912F00,
+  beer-5: #581301,
+  beer-6: #35090A,
+  beer-7: #080000
+);
+
+$font-sizes: (
+  xs: px2unit(10px),
+  s: px2unit(12px),
+  m: px2unit(16px),
+  l: px2unit(22px),
+  xl: px2unit(32px),
+  xxl: px2unit(80px)
+);
+
+@font-face {
+  font-family: font-name;
+//  src: url('../fonts/**');// TODO: add custom font
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function font-size($size-name) {
+  @return map-get($font-sizes, $size-name);
+}
+
+@mixin sans() {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin serif() {
+  font-family: Georgia, serif;
+}
+
+// --- General styles --- //
+
+ul, ol, dl, dd, dt, li, div, body, p, form, hr, h1, h2, h3, h4, h5, img, button {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+html {
+  font-size: font-size(m);
+  line-height: font-size(m);
+}
+
+body {
+  @include sans();
+  color: color(black);
+  background-color: color(white);
+}
+
+html,
+body,
+#route-view {
+  height: 100%;
+  width: 100%;
+}
+
+// --- Include all partials --- //
+
+@import 'components/beer-screen/beer-screen';
+@import 'components/beer-screen/carbonation/carbonation';
+@import 'components/svg-icon/svg-icon';
+@import 'components/toast/toast';
+
+@import 'routes/home/home';

@@ -1,0 +1,35 @@
+$home-header-height: px2unit(80px);
+$home-header-font-size: font-size(xxl);
+
+.home-route {
+
+  beer-screen {
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    height: $home-header-height;
+    line-height: $home-header-height;
+
+    @include serif();
+    font-size: $home-header-font-size;
+    text-align: center;
+    vertical-align: middle;
+
+    color: color(white);
+  }
+
+  .svg-icon[name=thumbs-up] {
+    position: relative;
+    top: px2unit(-8px);
+    width: px2unit(28px);
+  }
+}
