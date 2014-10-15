@@ -18,7 +18,7 @@ angular.module('beerScreenDirectives', [])
 
             element.css('background', colorString);
             screen.css('background', colorString);
-            screen.css('opacity', beerColors.opacity);
+            screen.css('opacity', beerColors[colorIndex].opacity);
           }
         }
       };

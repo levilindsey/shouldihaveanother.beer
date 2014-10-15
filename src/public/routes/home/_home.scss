@@ -19,6 +19,8 @@ $home-header-font-size: font-size(xxl);
     height: $home-header-height;
     line-height: $home-header-height;
 
+    z-index: 40;
+
     @include serif();
     font-size: $home-header-font-size;
     text-align: center;
