@@ -1,11 +1,13 @@
 angular.module('routes', [])
 
-    .config(function ($stateProvider, $urlRouterProvider) {
-      $urlRouterProvider.otherwise('/home');
+    .config(function ($locationProvider, $urlRouterProvider, $stateProvider) {
+      $locationProvider.html5Mode(true);
+
+      $urlRouterProvider.otherwise('/');
 
       $stateProvider
           .state('home', {
-            url: '/home',
+            url: '/',
             templateUrl: 'routes/home/home.html',
             controller: 'HomeCtrl'
           });
