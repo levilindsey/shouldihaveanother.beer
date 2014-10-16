@@ -10,7 +10,9 @@ angular.module('carbonationDirectives', [])
 
           var config = {};
 
-          config.minRadius = 1;
+          config.bubblesPerPixel = 0.0000001;
+
+          config.minRadius = 0.5;
           config.maxRadius = 3;
           config.minX = 0;
           config.maxX = body.offsetWidth;

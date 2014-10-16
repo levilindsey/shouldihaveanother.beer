@@ -1,4 +1,4 @@
-$home-header-height: px2unit(80px);
+$home-header-height: px2unit(160px);
 $home-header-font-size: font-size(xxl);
 
 .home-route {
@@ -10,7 +10,7 @@ $home-header-font-size: font-size(xxl);
 
   h1 {
     position: absolute;
-    top: 0;
+    top: px2unit(-30px);
     right: 0;
     bottom: 0;
     left: 0;
@@ -27,11 +27,5 @@ $home-header-font-size: font-size(xxl);
     vertical-align: middle;
 
     color: color(white);
-  }
-
-  .svg-icon[name=thumbs-up] {
-    position: relative;
-    top: px2unit(-8px);
-    width: px2unit(28px);
   }
 }
