@@ -25,15 +25,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.08838835"
-     inkscape:cx="109.52968"
-     inkscape:cy="2485.3402"
+     inkscape:zoom="0.7071068"
+     inkscape:cx="2248.0215"
+     inkscape:cy="2343.3464"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="2560"
-     inkscape:window-height="1378"
-     inkscape:window-x="-8"
+     inkscape:window-height="1418"
+     inkscape:window-x="2552"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -149,6 +149,33 @@
          id="path4003-9"
          d="m 1288.2812,284.71875 c -10.1033,208.01203 127.4201,317.08306 34.5626,506 25.6066,5.42415 55.1539,8.05721 71.3437,7.78125 23.2856,0.39691 70.6179,-3.70893 97.625,-15 -85.9073,-184.50787 47.9738,-293.43625 38,-498.78125 l -241.5313,0 z"
          style="fill:#000000;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g3807"
+       inkscape:export-filename="E:\Repositories\shouldihaveanother.beer\doc\images\favicon-32x32.png"
+       inkscape:export-xdpi="4.1579375"
+       inkscape:export-ydpi="4.1579375">
+      <rect
+         y="-1624.5872"
+         x="2425.533"
+         height="692.651"
+         width="692.651"
+         id="rect4009-7"
+         style="fill:none;fill-opacity:0.67307693000000002;stroke:none" />
+      <g
+         id="g3803">
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 2654.5301,-979.77663 c 141.0533,-236.95637 -77.1984,-345.79377 -3.067,-634.81037 54.469,0 135.5422,0 240.7909,0 74.1314,289.0166 -144.1203,397.854 -3.067,634.81037 15.1605,25.4681 -82.3447,38.4168 -117.3284,37.8205 -34.9837,0.5963 -132.489,-12.3524 -117.3285,-37.8205 z"
+           id="path3764-0-45-9"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sccscs" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           d="m 2673.9272,-1515.6677 c -10.1033,208.0121 127.4201,317.0831 34.5626,506 25.6066,5.4242 55.1539,8.0573 71.3437,7.7813 23.2856,0.3969 70.6179,-3.7089 97.625,-15 -85.9073,-184.5079 47.9738,-293.4363 38,-498.7813 l -241.5313,0 z"
+           id="path4003-4"
+           inkscape:connector-curvature="0" />
+      </g>
     </g>
   </g>
 </svg>
