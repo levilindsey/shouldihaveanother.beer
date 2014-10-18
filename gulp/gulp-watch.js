@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var plugins = require("gulp-load-plugins")({lazy: false});
 var config = require('./config');
 
-gulp.task('watch', ['tdd'], function () {
+gulp.task('watch', [], function () {
   gulp.watch([
         config.distGlob
   ], function (event) {
