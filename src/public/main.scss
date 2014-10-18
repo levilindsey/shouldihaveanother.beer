@@ -32,18 +32,17 @@ $home-header-height: 160px;
 
 html,
 body,
-.screen,
+.screens,
+.screen-1,
+.screen-2,
 .carbonation,
 h1 {
+  position: absolute;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-}
-
-.screen,
-.carbonation {
-  position: absolute;
+  overflow: hidden;
 }
 
 h1 {
@@ -68,15 +67,43 @@ h1 {
   opacity: 0.55;
 }
 
-.screen {
+.screens {
+  top: -25%;
+  height: 150%;
+
+  animation-name: oscillate-screen;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.screen-1 {
+  z-index: 31;
+
+  background: color(beer-7);
+  background: linear-gradient(color(beer-7), color(beer-8));
+}
+
+.screen-2 {
   z-index: 30;
 
-  background: color(beer-1);
-  background: linear-gradient(color(beer-1), color(beer-2));
+  background: color(beer-8);
+  background: linear-gradient(color(beer-7), color(beer-8));
 }
 
 .carbonation {
   display: block;
 
   z-index: 20;
+}
+
+@keyframes oscillate-screen {
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: -50%;
+  }
 }

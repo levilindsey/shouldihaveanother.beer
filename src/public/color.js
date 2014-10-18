@@ -28,17 +28,26 @@
     }
   ];
 
+  var screen1RelativeOpacity = 0.9;
+
   var body = document.querySelector('body');
-  var screen = body.querySelector('.screen');
+  var screen1 = body.querySelector('.screen-1');
+  var screen2 = body.querySelector('.screen-2');
 
   function setRandomScreenColor() {
     var colorIndex = parseInt(Math.random() * beerColors.length);
-    var colorString = 'linear-gradient(#' + beerColors[colorIndex].color1 + ',#' +
-        beerColors[colorIndex].color2 + ')';
 
-    body.style.background = colorString;
-    screen.style.background = colorString;
-    screen.style.opacity = beerColors[colorIndex].opacity;
+    var colorStringBackground = 'linear-gradient(#' + beerColors[colorIndex].color1 + ',#' +
+        beerColors[colorIndex].color2 + ')';
+    var colorStringScreen1 = 'linear-gradient(#' + beerColors[colorIndex].color1 + ',transparent)';
+    var colorStringScreen2 = 'linear-gradient(transparent,#' + beerColors[colorIndex].color2 + ')';
+
+    body.style.background = colorStringBackground;
+    screen1.style.background = colorStringScreen1;
+    screen2.style.background = colorStringScreen2;
+
+    screen1.style.opacity = beerColors[colorIndex].opacity * screen1RelativeOpacity;
+    screen2.style.opacity = beerColors[colorIndex].opacity;
   }
 
   window.beer = window.beer || {};
