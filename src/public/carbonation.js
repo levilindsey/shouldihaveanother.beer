@@ -20,7 +20,7 @@
 
   carbonationConfig.opacity = 0.5;
 
-  carbonationConfig.bubblesPerMillisPerPixel = 0.0000005;
+  carbonationConfig.bubblesPerMillisPerPixel = 0.0000003;
 
   carbonationConfig.fadeInDuration = 1000;
   carbonationConfig.instantFadeInDuration = 300;
@@ -179,7 +179,7 @@
       if (bubbles[i].y > 0) {
         context.beginPath();
         context.arc(bubbles[i].x, bubbles[i].y, bubbles[i].r, 0, twoPi, false);
-        context.closePath();// TODO: compare running without this
+        context.closePath();
         context.fillStyle = 'rgba(255,255,255,' +
             carbonationConfig.opacity * bubbles[i].opacity + ')';
         context.fill();
