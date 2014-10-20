@@ -26,6 +26,7 @@ config.stylesSrc = config.publicPath + '/**/*.scss';
 config.templatesSrc = [config.publicPath + '/**/*.html', '!' + config.indexSrc];
 config.mediaSrc = config.resPath + '/**';
 config.iconsSrc = config.resPath + '/images/icons/*.svg';
+config.deviceIconsSrc = config.resPath + '/images/device-icons/*';
 
 config.distGlob = config.distPath + '/**';
 
