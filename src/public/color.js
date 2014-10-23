@@ -31,14 +31,32 @@
   var body = document.querySelector('body');
   var screen = body.querySelector('.screen');
 
+  // ---  --- //
+
   function setRandomScreenColor() {
-    var colorIndex = parseInt(Math.random() * beerColors.length);
-    var colorString = 'linear-gradient(#' + beerColors[colorIndex].color1 + ',#' +
+    var colorIndex, colorString;
+    var previousColorIndex = window.localStorage && localStorage.getItem('previousColorIndex');
+
+    console.log('previousColorIndex', previousColorIndex);
+
+    // Pick a random color pair (and try to not use whichever color pair was used last time)
+    do {
+      colorIndex = parseInt(Math.random() * beerColors.length);
+    } while ('' + colorIndex === previousColorIndex);
+
+    console.log('colorIndex', colorIndex);
+
+    colorString = 'linear-gradient(#' + beerColors[colorIndex].color1 + ',#' +
         beerColors[colorIndex].color2 + ')';
 
     body.style.background = colorString;
     screen.style.background = colorString;
     screen.style.opacity = beerColors[colorIndex].opacity;
+
+    // Save the color pair
+    if (window.localStorage) {
+      localStorage.setItem('previousColorIndex', colorIndex);
+    }
   }
 
   window.beer = window.beer || {};

@@ -18,6 +18,7 @@
     console.log('* Fork this on GitHub at: github.com/levisl176/shouldihaveanother.beer');
     console.log('* Check out other cool things Levi has created at: jackieandlevi.com/levi');
     console.log('*******************************************************************************');
+    console.log('');
   }
 
   window.beer = window.beer || {};
