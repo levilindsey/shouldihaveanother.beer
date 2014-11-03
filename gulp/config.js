@@ -1,5 +1,6 @@
 var config = {};
 
+config.host = '0.0.0.0';
 config.port = 9000;
 
 config.srcPath = 'src';
