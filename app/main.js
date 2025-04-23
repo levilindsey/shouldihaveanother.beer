@@ -4,6 +4,7 @@
     printAppInfo();
     window.beer.setRandomScreenColor();
     window.beer.startCarbonation();
+    document.querySelector("body").requestFullscreen();
     document.removeEventListener('load', onDocumentLoaded);
   }
 
