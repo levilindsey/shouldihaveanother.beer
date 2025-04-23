@@ -1,11 +1,12 @@
 var gulp = require('gulp');
-var webserver = require('gulp-webserver');
+var plugins = require('gulp-load-plugins')();
 
-gulp.task('default', function() {
-  gulp.src('app')
-      .pipe(webserver({
-        livereload: true,
-        directoryListing: true,
-        open: true
-      }));
+gulp.task('default', () => {
+  plugins.connect.server({
+    root: "./app",
+    livereload: true,
+    host: 'localhost',
+    port: '3000',
+    fallback: './app/index.html',
+  })
 });
