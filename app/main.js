@@ -4,7 +4,7 @@
     printAppInfo();
     window.beer.setRandomScreenColor();
     window.beer.startCarbonation();
-    document.querySelector("body").requestFullscreen();
+    document.documentElement.requestFullscreen({ navigationUI: "hide" });
     document.removeEventListener('load', onDocumentLoaded);
   }
 
